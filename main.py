@@ -1,9 +1,10 @@
 from mastodon import Mastodon
 import html2text
 import requests
+import os
 
 mastodon = Mastodon(
-    access_token = "token.secret",
+    access_token = os.path.dirname(os.path.realpath(__file__)) + "/token.secret",
     api_base_url = "https://pointless.chat/"
 )
 
